@@ -3,7 +3,10 @@
   box-sizing: border-box;
   padding: 0;
   font-family: "Inter", sans-serif;
+
+ 
 }
+
 html {
   scroll-behavior: smooth;
 }
@@ -20,87 +23,6 @@ header {
   align-items: center;
   justify-content: center;
   flex-direction: column;
-}
-nav {
-  width: 100%;
-  bottom: 200px;
-  position: relative;
-  padding: 10px;
-  background-color: transparent;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-}
-nav .logo {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 8px;
-}
-nav .logo img {
-  width: 90px;
-  height: 90px;
-  object-fit: cover;
-  border-radius: 100%;
-}
-nav .logo p {
-  margin: 0;
-  font-size: 1.2rem;
-  font-weight: 700;
-  color: white;
-}
-nav ul {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 20px;
-  list-style: none;
-}
-nav ul li form input[type="submit"] {
-  background-color: white;
-  color: black;
-  padding: 8px;
-  border: 1px solid white;
-  transition: 0.3s all ease-in-out;
-}
-nav ul li form input[type="submit"]:hover {
-  border-color: #3dc3bb;
-  background-color: #3dc3bb;
-  transition: 0.3s all ease-in-out;
-  color: white;
-}
-nav ul li form input {
-  color: white;
-  border: 2px solid white;
-  border-radius: 7px;
-  padding: 7px 4px;
-  outline: none;
-  font-size: 0.9rem;
-  background-color: transparent;
-}
-nav ul li input::placeholder {
-  color: white;
-}
-
-nav ul li form {
-  display: flex;
-  gap: 20px;
-  width: 100%;
-
-  align-items: center;
-  justify-content: space-evenly;
-}
-nav button {
-  padding: 8px;
-  border: 1px solid white;
-  background-color: transparent;
-  border-radius: 10px;
-  margin-right: 20px;
-}
-
-nav button a {
-  text-decoration: none;
-  color: white;
 }
 
 header .banner {
@@ -309,40 +231,3 @@ h2 {
   color: #3dc3bb;
 }
 
-footer {
-  background-color: rgba(6, 5, 5, 0.853);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-direction: column;
-  gap: 10px;
-  padding: 30px 0px;
-  margin-top: 200px;
-}
-footer img {
-  height: 90px;
-  width: 90px;
-  object-fit: cover;
-  border-radius: 100%;
-}
-footer p {
-  color: white;
-  font-weight: 600;
-  font-size: 0.8rem;
-}
-.redes-sociais-footer {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 10px;
-  width: 100%;
-  margin-top: 5px;
-}
-.redes-sociais-footer a {
-  text-decoration: none;
-  color: none;
-}
-.redes-sociais-footer i {
-  font-size: 1rem;
-  color: #3dc3bb;
-}

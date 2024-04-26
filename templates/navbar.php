@@ -3,7 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./styles.css">
+    <link rel="stylesheet" href="./templates/css/navbar.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap"
+      rel="stylesheet"
+    />
     <title>Document</title>
 </head>
 <body>
@@ -23,9 +29,14 @@
                 placeholder="Sua Senha"
               />
               <input type="submit" value="Login" />
+              <a href="cadastro.php" class="cadastro">Cadastre-se</a>
             </form>
           </li>
         </ul>
 </nav>
+<script
+      src="https://kit.fontawesome.com/1c065add65.js"
+      crossorigin="anonymous"
+    ></script>
 </body>
 </html>
