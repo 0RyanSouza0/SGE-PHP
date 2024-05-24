@@ -16,16 +16,29 @@
 <body>
   <div class="align-formulario">
     <img src="./img/fundo.jpg" alt="">
-        <form action="salvarUsuario.php"  method="post">
+        <form action="valida_login_sge.php"  method="post">
             <label for="">Nome</label>
-            <input type="text" name="nome" id="">
-            <label for="">Email</label>
-            <input type="email" name="email" id="">
-            <label for="">Telefone</label>
-            <input type="tel" name="telefone" id="">
-            <input type="submit" value="cadastrar aluno" class="btn">
+            <input type="text" name="login_sge" id="">
+            <label for="">Senha</label>
+            <input type="password" name="password_sge" id="">
+            <input type="submit" value="LOGIN" class="btn">
         </form>
-    </div>
+        <p><a href="#">Esqueceu a senha?</a></p>
+        <p><a href="./cadastro.php">Cadastre-se</a></p>
+        <!-- VALIDAR LOGIN -->
+        <?php   
+        // INICIAR SESSION
+          session_start();
+          if(isset($_SESSION['mensagem'])){
+            $mensagem= $_SESSION['mensagem'];
+            echo "<p>" .$mensagem. "</p>";
+
+            unset($_SESSION['mensagem']);
+
+          }
+        ?>
   
+    </div>
+   
 </body>
 </html>

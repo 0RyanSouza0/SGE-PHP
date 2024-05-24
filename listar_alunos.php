@@ -14,32 +14,34 @@ $resultado = mysqli_query($conexao, $sql_listar);
     <title>Document</title>
 </head>
 <body>
-    <!-- <?php  include './templates/navbar.php'; ?> -->
-
-    <table>
-        <thead> TABELA DE ALUNOS
-            <tr>
+    <?php include './templates/navbar.php';?>
+    <div class="align-tabela">
+        <table>
+            <thead class="align-name"> 
+                <tr>
+                    <th>Nome</th>
+                    <th>Email</th>
+                    <th>Telefone</th>
+                    <th>Atualizar</th>
+                    <th>Excluir</th>
                 
-                <th>Nome: </th>
-                <th>Email: </th>
-                <th>Telefone: </th>
-                <th>Atualizar: </th>
-                <th>Excluir: </th>
-               
-            </tr>
-        </thead>
-        <tbody>
-        <?php while($listar = mysqli_fetch_array($resultado)) { ?>
-            <tr>
-                <td><?=$listar[1] ?> </td>
-                <td><?=$listar[2] ?></td>
-                <td><?=$listar[3] ?></td>
-                <td> <a href="update.php"> <i class="fa-solid fa-pen"></i></a</td>
-                <td><a href="deletar.php"><i class="fa-solid fa-trash"></i></a></td>
-            </tr>
-        <?php }?>
-        </tbody>
-    </table>
+                </tr>
+            </thead>
+            <tbody  class="align-itens">
+            <?php while($listar = mysqli_fetch_array($resultado)) { ?>
+                <tr >
+                    <td class="nome"><?=$listar[1] ?> </td>
+                    <td class="email"><?=$listar[2] ?></td>
+                    <td class="telefone"><?=$listar[3] ?></td>
+                    <td> <a href="form_atualizar_cad_aluno.php?id_aluno=<?php echo $listar['id_aluno']?>"> <i class="fa-solid fa-pen"></i></a</td>
+                    <td><a href="excluir_cadastro_cad_aluno.php?id_aluno=<?php echo $listar['id_aluno']?>"><i class="fa-solid fa-trash"></i></a></td>
+                </tr>
+            <?php }?>
+            </tbody>
+        </table>
+    </div>
+    <?php include './templates/footer.php';?>
+
     <script src="https://kit.fontawesome.com/1c065add65.js" crossorigin="anonymous"></script>
         
 </body>
